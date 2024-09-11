@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #81ffef, #f067b4);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Calculator Container */
+.calculator {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    padding: 20px;
+    width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Display Styling */
+.display {
+    height: 70px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Button Styling */
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Operator Buttons */
+button.operator {
+    background-color: #ff6363;
+    color: white;
+}
+
+button.operator:hover {
+    background-color: #ff3b3b;
+}
+
+/* Equals Button */
+#equals {
+    grid-column: span 4;
+    background-color: #4caf50;
+    color: white;
+}
+
+#equals:hover {
+    background-color: #45a049;
+}
+
+/* Clear Button */
+#clear {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+#clear:hover {
+    background-color: #ff4747;
+}
+
+/* Modern Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
